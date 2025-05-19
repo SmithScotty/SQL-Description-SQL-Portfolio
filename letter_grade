@@ -1,0 +1,32 @@
+SELECT name
+, score
+, CASE
+	WHEN score >=97 THEN "A+"
+	WHEN score >=93 THEN "A"
+	WHEN score >=90 THEN "A-"
+	WHEN score >=87 THEN "B+"
+	WHEN score >=83 THEN "B"
+	WHEN score >=80 THEN "B-"
+	WHEN score >=77 THEN "C+"
+	WHEN score >=73 THEN "C"
+	WHEN score >=70 THEN "C-"
+ELSE "fail"
+END AS letter_grade
+FROM grades;
+
+
+SELECT name
+, score
+, CASE
+	WHEN score >=70 THEN "C-"
+	WHEN score >=73 THEN "C"
+	WHEN score >=77 THEN "C+"
+	WHEN score >=80 THEN "B-"
+	WHEN score >=83 THEN "B"
+	WHEN score >=87 THEN "B+"
+	WHEN score >=90 THEN "A-"
+	WHEN score >=93 THEN "A"
+	WHEN score >=97 THEN "A+"
+ELSE "fail"
+END AS letter_grade
+FROM grades;
